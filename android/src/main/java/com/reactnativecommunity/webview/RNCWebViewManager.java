@@ -402,6 +402,11 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
         callback.invoke(origin, true, false);
       }
 
+      @Override
+      public void onPermissionRequest(final PermissionRequest request) {
+          request.grant(request.getResources());
+      }
+
       protected void openFileChooser(ValueCallback<Uri> filePathCallback, String acceptType) {
         getModule().startPhotoPickerIntent(filePathCallback, acceptType);
       }
