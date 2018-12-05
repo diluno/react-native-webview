@@ -27,6 +27,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.webkit.ConsoleMessage;
 import android.webkit.CookieManager;
 import android.webkit.GeolocationPermissions;
+import android.webkit.PermissionRequest;
 import android.webkit.JavascriptInterface;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
@@ -404,7 +405,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
 
       @Override
       public void onPermissionRequest(final PermissionRequest request) {
-          request.grant(request.getResources());
+        request.grant(request.getResources());
       }
 
       protected void openFileChooser(ValueCallback<Uri> filePathCallback, String acceptType) {
