@@ -433,6 +433,8 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
     settings.setBuiltInZoomControls(true);
     settings.setDisplayZoomControls(false);
     settings.setDomStorageEnabled(true);
+    settings.setAppCacheEnabled(false);
+    settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
     settings.setAllowFileAccess(false);
     settings.setAllowContentAccess(false);
