@@ -435,8 +435,6 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
     settings.setDomStorageEnabled(true);
     settings.setAppCacheEnabled(false);
     settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
-    settings.setMediaPlaybackRequiresUserGesture(false);
-    settings.setMediaPlaybackRequiresUserAction(false);
 
     settings.setAllowFileAccess(false);
     settings.setAllowContentAccess(false);
